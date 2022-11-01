@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -20,28 +21,25 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     final themeProvider = context.watch<ThemeProvider>();
+    final String deviceLocale= Platform.localeName.split('-')[0];
     return ScreenUtilInit(
           designSize: const Size(375, 812),
           minTextAdapt: true,
           builder: (context, child) {
             return MaterialApp(
-              title: 'Resume App',
               localizationsDelegates: AppLocalizations.localizationsDelegates,
               supportedLocales: AppLocalizations.supportedLocales,
               localeResolutionCallback: (Locale? locale, Iterable<Locale> supportedLocales) {
                 for (final supportedLocale in supportedLocales) {
-                  if (locale!.languageCode == supportedLocale.languageCode) {
+                  if (deviceLocale == supportedLocale.languageCode) {
                     return supportedLocale;
                   }
                 }
-
                 return supportedLocales.first;
               },
-              locale: const Locale('es', ''),
               builder: DevicePreview.appBuilder,
               themeMode: themeProvider.themeMode,
               useInheritedMediaQuery: true,

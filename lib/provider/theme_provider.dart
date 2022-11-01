@@ -16,6 +16,7 @@ class ThemeProvider extends ChangeNotifier {
 }
 
 class MyThemes {
+  //Dark Theme Mode
   static final darkTheme = ThemeData(
     textTheme: GoogleFonts.openSansTextTheme(),
     scaffoldBackgroundColor: kGrayColor0,
@@ -23,6 +24,7 @@ class MyThemes {
     colorScheme: const ColorScheme.dark(),
   );
 
+  //Light Theme Mode
   static final lightTheme = ThemeData(
     textTheme: GoogleFonts.openSansTextTheme(),
     scaffoldBackgroundColor: kWhite,

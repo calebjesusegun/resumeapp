@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import '../utils/size_manager.dart';
 
 class ProfileDetails extends StatelessWidget {
   const ProfileDetails({
@@ -18,16 +17,14 @@ class ProfileDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
+    Orientation orientation = MediaQuery.of(context).orientation;
+    return Wrap(
+      direction: Axis.vertical,
+      spacing: orientation == Orientation.portrait ? 4 : 6,
       children: [
         Text(
           AppLocalizations.of(context)!.calebjesusegun,
           style: usernameTextStyle,
-        ),
-        SizedBox(
-          height: SizeMg.height(3),
         ),
         ConstrainedBox(
           constraints: BoxConstraints(maxWidth: size.width * 0.5),
@@ -36,9 +33,6 @@ class ProfileDetails extends StatelessWidget {
             style: professionTextStyle,
             softWrap: true,
           ),
-        ),
-        SizedBox(
-          height: SizeMg.height(3),
         ),
         Text(
           AppLocalizations.of(context)!.country,

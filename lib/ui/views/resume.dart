@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../provider/theme_provider.dart';
 import '../components/custom_appbar.dart';
 import '../components/custom_stepper.dart';
+import '../components/image_avatar.dart';
 import '../components/profile_details.dart';
 import '../components/skills_card.dart';
 import '../utils/app_colors.dart';
@@ -33,24 +33,16 @@ class ResumeView extends StatelessWidget {
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: SizeMg.width(16), vertical: SizeMg.height(24)),
+                horizontal: SizeMg.width(16), vertical: SizeMg.height(20)),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(8.0),
-                      child: Image.asset(
-                        "assets/png/caleb.png",
-                        width: SizeMg.width(80),
-                        height: SizeMg.height(80),
-                        fit: BoxFit.fill,
-                      ),
-                    ),
+                    const ImageAvatar(),
                     SizedBox(
-                      width: SizeMg.width(16),
+                      width: SizeMg.width(12),
                     ),
                     themeProvider.themeMode == ThemeMode.dark
                         ? ProfileDetails(
@@ -89,7 +81,7 @@ class ResumeView extends StatelessWidget {
                   height: SizeMg.height(24),
                 ),
                 Wrap(
-                  spacing: 24,
+                  spacing: 20,
                   runSpacing: 24,
                   children: [
                     SkillsCard(
@@ -183,6 +175,22 @@ class ResumeView extends StatelessWidget {
                       companyTextStyle: themeProvider.themeMode == ThemeMode.dark
                           ? kTextStyle8 : kTextStyle7,
                     ),
+                    SizedBox(
+                      height: SizeMg.height(16),
+                    ),
+                    CustomStepper(
+                      dateTextStyle: themeProvider.themeMode == ThemeMode.dark ? kTextStyle4 : kTextStyle5,
+                      stepperColor: themeProvider.themeMode == ThemeMode.dark
+                          ? kGrayColor20
+                          : kGrayColor40,
+                      professionTextStyle: themeProvider.themeMode == ThemeMode.dark
+                          ? kTextStyle4 : kTextStyle6,
+                      dateText: AppLocalizations.of(context)!.dateText3,
+                      professionText: AppLocalizations.of(context)!.professionText3,
+                      companyText: AppLocalizations.of(context)!.companyText3,
+                      companyTextStyle: themeProvider.themeMode == ThemeMode.dark
+                          ? kTextStyle8 : kTextStyle7,
+                    ),
                   ],
                 ),
               ],
@@ -193,3 +201,5 @@ class ResumeView extends StatelessWidget {
     );
   }
 }
+
+

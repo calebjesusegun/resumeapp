@@ -19,11 +19,12 @@ class SkillsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Orientation orientation = MediaQuery.of(context).orientation;
     return Material(
       color: kTransparent,
       child: Container(
-        width: SizeMg.width(115),
-        height: SizeMg.height(90),
+        width: orientation == Orientation.portrait ? SizeMg.height(100) : SizeMg.width(100),
+        height: orientation == Orientation.portrait ? SizeMg.height(90) : SizeMg.height(200),
         decoration: BoxDecoration(
           color: backgroundColor,
           borderRadius: BorderRadius.circular(8),
@@ -35,7 +36,7 @@ class SkillsCard extends StatelessWidget {
             height: 32,
           ),
           SizedBox(
-            height: SizeMg.height(6),
+            height: SizeMg.height(8),
           ),
           Text(
             labelText,
