@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../provider/theme_provider.dart';
 import '../components/custom_appbar.dart';
 import '../components/custom_stepper.dart';
@@ -63,7 +62,7 @@ class ResumeView extends StatelessWidget {
                   height: SizeMg.height(24),
                 ),
                 Text(
-                  AppLocalizations.of(context)!.bio,
+                  "Enthusiastic Flutter Developer and Freelance Designer in love with user-centric designs",
                   style: themeProvider.themeMode == ThemeMode.dark
                       ? kTextStyle4
                       : kTextStyle5,
@@ -72,7 +71,7 @@ class ResumeView extends StatelessWidget {
                   height: SizeMg.height(24),
                 ),
                 Text(
-                  AppLocalizations.of(context)!.skills,
+                  "Skills",
                   style: themeProvider.themeMode == ThemeMode.dark
                       ? kTextStyle8
                       : kTextStyle7,
@@ -89,7 +88,7 @@ class ResumeView extends StatelessWidget {
                       labelTextStyle: themeProvider.themeMode == ThemeMode.dark
                           ? kTextStyle4
                           : kTextStyle6,
-                      labelText: AppLocalizations.of(context)!.figma,
+                      labelText: "Figma",
                       backgroundColor: themeProvider.themeMode == ThemeMode.dark
                           ? kGrayColor10
                           : kGrayColor90,
@@ -99,7 +98,7 @@ class ResumeView extends StatelessWidget {
                       labelTextStyle: themeProvider.themeMode == ThemeMode.dark
                           ? kTextStyle4
                           : kTextStyle6,
-                      labelText: AppLocalizations.of(context)!.flutter,
+                      labelText: "Flutter",
                       backgroundColor: themeProvider.themeMode == ThemeMode.dark
                           ? kGrayColor10
                           : kGrayColor90,
@@ -109,7 +108,7 @@ class ResumeView extends StatelessWidget {
                       labelTextStyle: themeProvider.themeMode == ThemeMode.dark
                           ? kTextStyle4
                           : kTextStyle6,
-                      labelText: AppLocalizations.of(context)!.dart,
+                      labelText: "Dart",
                       backgroundColor: themeProvider.themeMode == ThemeMode.dark
                           ? kGrayColor10
                           : kGrayColor90,
@@ -120,7 +119,7 @@ class ResumeView extends StatelessWidget {
                   height: SizeMg.height(24),
                 ),
                 Text(
-                  AppLocalizations.of(context)!.experiences,
+                  "Experiences",
                   style: themeProvider.themeMode == ThemeMode.dark
                       ? kTextStyle8
                       : kTextStyle7,
@@ -131,65 +130,67 @@ class ResumeView extends StatelessWidget {
                 Column(
                   children: [
                     CustomStepper(
-                      dateTextStyle: themeProvider.themeMode == ThemeMode.dark ? kTextStyle4 : kTextStyle5,
+                      dateTextStyle: themeProvider.themeMode == ThemeMode.dark
+                          ? kTextStyle4
+                          : kTextStyle5,
                       stepperColor: themeProvider.themeMode == ThemeMode.dark
                           ? kGrayColor20
                           : kGrayColor40,
-                      professionTextStyle: themeProvider.themeMode == ThemeMode.dark
-                          ? kTextStyle4 : kTextStyle6,
-                      dateText: AppLocalizations.of(context)!.dateText1,
-                      professionText: AppLocalizations.of(context)!.professionText1,
-                      companyText: AppLocalizations.of(context)!.companyText1,
-                      companyTextStyle: themeProvider.themeMode == ThemeMode.dark
-                          ? kTextStyle8 : kTextStyle7,
+                      professionTextStyle:
+                          themeProvider.themeMode == ThemeMode.dark
+                              ? kTextStyle4
+                              : kTextStyle6,
+                      dateText: "October 26, 2022 - Present",
+                      professionText: "Flutter Developer Mentor",
+                      companyText: "Flutter Inc.",
+                      companyTextStyle:
+                          themeProvider.themeMode == ThemeMode.dark
+                              ? kTextStyle8
+                              : kTextStyle7,
                     ),
                     SizedBox(
                       height: SizeMg.height(16),
                     ),
                     CustomStepper(
-                      dateTextStyle: themeProvider.themeMode == ThemeMode.dark ? kTextStyle4 : kTextStyle5,
+                      dateTextStyle: themeProvider.themeMode == ThemeMode.dark
+                          ? kTextStyle4
+                          : kTextStyle5,
                       stepperColor: themeProvider.themeMode == ThemeMode.dark
                           ? kGrayColor20
                           : kGrayColor40,
-                      professionTextStyle: themeProvider.themeMode == ThemeMode.dark
-                          ? kTextStyle4 : kTextStyle6,
-                      dateText: AppLocalizations.of(context)!.dateText2,
-                      professionText: AppLocalizations.of(context)!.professionText2,
-                      companyText: AppLocalizations.of(context)!.companyText2,
-                      companyTextStyle: themeProvider.themeMode == ThemeMode.dark
-                          ? kTextStyle8 : kTextStyle7,
+                      professionTextStyle:
+                          themeProvider.themeMode == ThemeMode.dark
+                              ? kTextStyle4
+                              : kTextStyle6,
+                      dateText: "2021 - Present",
+                      professionText: "UI/UX Designer",
+                      companyText: "Figma Inc.",
+                      companyTextStyle:
+                          themeProvider.themeMode == ThemeMode.dark
+                              ? kTextStyle8
+                              : kTextStyle7,
                     ),
                     SizedBox(
                       height: SizeMg.height(16),
                     ),
                     CustomStepper(
-                      dateTextStyle: themeProvider.themeMode == ThemeMode.dark ? kTextStyle4 : kTextStyle5,
+                      dateTextStyle: themeProvider.themeMode == ThemeMode.dark
+                          ? kTextStyle4
+                          : kTextStyle5,
                       stepperColor: themeProvider.themeMode == ThemeMode.dark
                           ? kGrayColor20
                           : kGrayColor40,
-                      professionTextStyle: themeProvider.themeMode == ThemeMode.dark
-                          ? kTextStyle4 : kTextStyle6,
-                      dateText: AppLocalizations.of(context)!.dateText3,
-                      professionText: AppLocalizations.of(context)!.professionText3,
-                      companyText: AppLocalizations.of(context)!.companyText3,
-                      companyTextStyle: themeProvider.themeMode == ThemeMode.dark
-                          ? kTextStyle8 : kTextStyle7,
-                    ),
-                    SizedBox(
-                      height: SizeMg.height(16),
-                    ),
-                    CustomStepper(
-                      dateTextStyle: themeProvider.themeMode == ThemeMode.dark ? kTextStyle4 : kTextStyle5,
-                      stepperColor: themeProvider.themeMode == ThemeMode.dark
-                          ? kGrayColor20
-                          : kGrayColor40,
-                      professionTextStyle: themeProvider.themeMode == ThemeMode.dark
-                          ? kTextStyle4 : kTextStyle6,
-                      dateText: AppLocalizations.of(context)!.dateText3,
-                      professionText: AppLocalizations.of(context)!.professionText3,
-                      companyText: AppLocalizations.of(context)!.companyText3,
-                      companyTextStyle: themeProvider.themeMode == ThemeMode.dark
-                          ? kTextStyle8 : kTextStyle7,
+                      professionTextStyle:
+                          themeProvider.themeMode == ThemeMode.dark
+                              ? kTextStyle4
+                              : kTextStyle6,
+                      dateText: "2020 - Present",
+                      professionText: "Flutter Developer",
+                      companyText: "Flutter Inc.",
+                      companyTextStyle:
+                          themeProvider.themeMode == ThemeMode.dark
+                              ? kTextStyle8
+                              : kTextStyle7,
                     ),
                   ],
                 ),
@@ -201,5 +202,3 @@ class ResumeView extends StatelessWidget {
     );
   }
 }
-
-

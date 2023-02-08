@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ProfileDetails extends StatelessWidget {
   const ProfileDetails({
@@ -23,19 +22,19 @@ class ProfileDetails extends StatelessWidget {
       spacing: orientation == Orientation.portrait ? 4 : 6,
       children: [
         Text(
-          AppLocalizations.of(context)!.calebjesusegun,
+          "Caleb Jesusegun",
           style: usernameTextStyle,
         ),
         ConstrainedBox(
           constraints: BoxConstraints(maxWidth: size.width * 0.5),
           child: Text(
-            AppLocalizations.of(context)!.flutterDeveloper,
+            "Flutter Developer / Product Designer",
             style: professionTextStyle,
             softWrap: true,
           ),
         ),
         Text(
-          AppLocalizations.of(context)!.country,
+          "Lagos, Nigeria",
           style: locationTextStyle,
         ),
       ],

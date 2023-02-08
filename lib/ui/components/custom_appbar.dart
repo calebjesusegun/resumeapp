@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../../provider/theme_provider.dart';
 import '../utils/app_colors.dart';
 import 'custom_switch.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
@@ -27,12 +26,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         child: Container(
           color: kGrayColor80,
           height: 1,
-        ),),
+        ),
+      ),
       elevation: 0,
       automaticallyImplyLeading: false,
       centerTitle: false,
       title: Text(
-        AppLocalizations.of(context)!.resumeApp,
+        "Resume App",
         style: labelTextStyle,
       ),
       actions: [
