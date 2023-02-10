@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:resumeapp/extensions/app_locale.dart';
 import '../../provider/theme_provider.dart';
 import '../components/custom_appbar.dart';
 import '../components/custom_stepper.dart';
@@ -62,7 +63,7 @@ class ResumeView extends StatelessWidget {
                   height: SizeMg.height(24),
                 ),
                 Text(
-                  "Enthusiastic Flutter Developer and Freelance Designer in love with user-centric designs",
+                  context.loc.bio,
                   style: themeProvider.themeMode == ThemeMode.dark
                       ? kTextStyle4
                       : kTextStyle5,
@@ -71,7 +72,7 @@ class ResumeView extends StatelessWidget {
                   height: SizeMg.height(24),
                 ),
                 Text(
-                  "Skills",
+                  context.loc.skills,
                   style: themeProvider.themeMode == ThemeMode.dark
                       ? kTextStyle8
                       : kTextStyle7,
@@ -88,7 +89,7 @@ class ResumeView extends StatelessWidget {
                       labelTextStyle: themeProvider.themeMode == ThemeMode.dark
                           ? kTextStyle4
                           : kTextStyle6,
-                      labelText: "Figma",
+                      labelText: context.loc.figma,
                       backgroundColor: themeProvider.themeMode == ThemeMode.dark
                           ? kGrayColor10
                           : kGrayColor90,
@@ -98,7 +99,7 @@ class ResumeView extends StatelessWidget {
                       labelTextStyle: themeProvider.themeMode == ThemeMode.dark
                           ? kTextStyle4
                           : kTextStyle6,
-                      labelText: "Flutter",
+                      labelText: context.loc.flutter,
                       backgroundColor: themeProvider.themeMode == ThemeMode.dark
                           ? kGrayColor10
                           : kGrayColor90,
@@ -108,7 +109,7 @@ class ResumeView extends StatelessWidget {
                       labelTextStyle: themeProvider.themeMode == ThemeMode.dark
                           ? kTextStyle4
                           : kTextStyle6,
-                      labelText: "Dart",
+                      labelText: context.loc.dart,
                       backgroundColor: themeProvider.themeMode == ThemeMode.dark
                           ? kGrayColor10
                           : kGrayColor90,
@@ -119,7 +120,7 @@ class ResumeView extends StatelessWidget {
                   height: SizeMg.height(24),
                 ),
                 Text(
-                  "Experiences",
+                  context.loc.experiences,
                   style: themeProvider.themeMode == ThemeMode.dark
                       ? kTextStyle8
                       : kTextStyle7,
@@ -140,9 +141,9 @@ class ResumeView extends StatelessWidget {
                           themeProvider.themeMode == ThemeMode.dark
                               ? kTextStyle4
                               : kTextStyle6,
-                      dateText: "October 26, 2022 - Present",
-                      professionText: "Flutter Developer Mentor",
-                      companyText: "Flutter Inc.",
+                      dateText: context.loc.date_text1,
+                      professionText: context.loc.profession_text1,
+                      companyText: context.loc.company_text1,
                       companyTextStyle:
                           themeProvider.themeMode == ThemeMode.dark
                               ? kTextStyle8
@@ -162,9 +163,9 @@ class ResumeView extends StatelessWidget {
                           themeProvider.themeMode == ThemeMode.dark
                               ? kTextStyle4
                               : kTextStyle6,
-                      dateText: "2021 - Present",
-                      professionText: "UI/UX Designer",
-                      companyText: "Figma Inc.",
+                      dateText: context.loc.date_text2,
+                      professionText: context.loc.profession_text2,
+                      companyText: context.loc.company_text2,
                       companyTextStyle:
                           themeProvider.themeMode == ThemeMode.dark
                               ? kTextStyle8
@@ -184,9 +185,9 @@ class ResumeView extends StatelessWidget {
                           themeProvider.themeMode == ThemeMode.dark
                               ? kTextStyle4
                               : kTextStyle6,
-                      dateText: "2020 - Present",
-                      professionText: "Flutter Developer",
-                      companyText: "Flutter Inc.",
+                      dateText: context.loc.date_text3,
+                      professionText: context.loc.profession_text3,
+                      companyText: context.loc.company_text3,
                       companyTextStyle:
                           themeProvider.themeMode == ThemeMode.dark
                               ? kTextStyle8

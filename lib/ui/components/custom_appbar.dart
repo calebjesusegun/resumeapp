@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:resumeapp/extensions/app_locale.dart';
 import '../../provider/theme_provider.dart';
 import '../utils/app_colors.dart';
 import 'custom_switch.dart';
@@ -32,7 +33,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       automaticallyImplyLeading: false,
       centerTitle: false,
       title: Text(
-        "Resume App",
+        context.loc.resume_app,
         style: labelTextStyle,
       ),
       actions: [
