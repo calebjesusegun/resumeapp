@@ -41,15 +41,6 @@ class _MyAppState extends State<MyApp> {
         return MaterialApp(
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
-          // localeResolutionCallback:
-          //     (Locale? locale, Iterable<Locale> supportedLocales) {
-          //   for (final supportedLocale in supportedLocales) {
-          //     if (deviceLocale == supportedLocale.languageCode) {
-          //       return supportedLocale;
-          //     }
-          //   }
-          //   return supportedLocales.first;
-          // },
           themeMode: themeProvider.themeMode,
           useInheritedMediaQuery: true,
           theme: MyThemes.lightTheme,
