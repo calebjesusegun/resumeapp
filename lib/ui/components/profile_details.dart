@@ -23,7 +23,7 @@ class ProfileDetails extends StatelessWidget {
       spacing: orientation == Orientation.portrait ? 4 : 6,
       children: [
         Text(
-          context.loc.caleb_jesusegun,
+          context.loc.calebj,
           style: usernameTextStyle,
         ),
         ConstrainedBox(
